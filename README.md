@@ -3,14 +3,12 @@
 ## First run the pipeline using nextflow command:
 ```
 nextflow run sra.nf -profile standard -resume
-``
+```
 
 ## After getting all the SRA files the use concatenate.sh to match the read pairs
 ```
 !#/bin/zshrc
-
 cd concatenate/fastq
-
 cat SRR7179504_pass.fastq.gz SRR7179505_pass.fastq.gz SRR7179506_pass.fastq.gz SRR7179507_pass.fastq.gz  > LNCAP_Normoxia_S1.fastq.gz
 cat SRR7179508_pass.fastq.gz SRR7179509_pass.fastq.gz SRR7179510_pass.fastq.gz SRR7179511_pass.fastq.gz  > LNCAP_Normoxia_S2.fastq.gz
 cat SRR7179520_pass.fastq.gz SRR7179521_pass.fastq.gz SRR7179522_pass.fastq.gz SRR7179523_pass.fastq.gz  > LNCAP_Hypoxia_S1.fastq.gz
